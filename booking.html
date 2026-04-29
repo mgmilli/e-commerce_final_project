@@ -31,19 +31,19 @@
     </nav>
 
     <main id="main-content">
-        <section class="page-hero">
-            <div class="container">
-                <span class="hero-eyebrow">Reserve your seats</span>
-                <h1>Book Your Tickets</h1>
+        <section class="page-hero page-hero-tight section">
+            <div class="container section-header section-header--compact">
+                <span class="hero-eyebrow">Reserve Your Seat</span>
+                <h1>Book Tickets</h1>
                 <p class="section-subtitle">
-                    Choose an event, confirm your details, and see the total update instantly as you adjust the ticket count.
+                    Choose a performance, confirm your details, and watch the total update instantly as you adjust the ticket count.
                 </p>
             </div>
         </section>
 
-        <section class="page-section">
+        <section class="page-section page-section-tight section section--tight">
             <div class="container booking-layout">
-                <form id="bookingForm" class="booking-form" novalidate>
+                <form id="bookingForm" class="booking-form form-card card" novalidate>
                     <div class="form-row">
                         <label for="name">Name <span class="required-mark">*</span></label>
                         <input type="text" id="name" name="name" autocomplete="name" required minlength="2" placeholder="Your full name">
@@ -76,12 +76,12 @@
 
                     <p id="bookingMessage" class="form-message" aria-live="polite"></p>
 
-                    <button type="submit" class="form-submit">Confirm Booking</button>
+                    <button type="submit" class="form-submit btn btn-primary">Confirm Booking</button>
                 </form>
 
-                <aside class="booking-summary">
-                    <h2>Booking Summary</h2>
-                    <p id="selectedEvent">Select an event to see pricing.</p>
+                <aside class="booking-summary card">
+                    <h2>Performance Summary</h2>
+                    <p id="selectedEvent">Select a performance to see pricing.</p>
                     <dl class="summary-list">
                         <div>
                             <dt>Venue</dt>

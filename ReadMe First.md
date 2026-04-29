@@ -1,10 +1,10 @@
 # EventHub - Read Me First
 
-EventHub is a small static event booking website built with plain HTML, CSS, and JavaScript. It now includes a stronger visual design, responsive layouts, inline validation, and a more realistic booking flow.
+EventHub is a small static event booking website built with plain HTML, CSS, and JavaScript. It now uses a cinematic theater-and-concert visual identity with responsive layouts, inline validation, and a more realistic booking flow.
 
 ## Project Files
 
-- `index.html` - homepage with hero, featured events, and a benefits section
+- `index.html` - homepage with a cinematic hero, featured performances, and a benefits section
 - `events.html` - events listing with category filters and live status text
 - `event-details.html` - event detail page with highlights and booking call to action
 - `booking.html` - ticket booking form with live pricing and validation
@@ -30,4 +30,4 @@ Open `index.html` in a browser to start browsing the site. All pages are linked 
 
 - The site uses no frameworks.
 - Event artwork is stored locally as simple SVG assets instead of external placeholder images.
-- The project is intended to feel like a polished final project or portfolio demo.
+- The project is intended to feel like a polished final project or portfolio demo with a premium venue style.

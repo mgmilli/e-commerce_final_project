@@ -3,19 +3,19 @@
   <desc id="desc">Bold concert poster with energetic red and teal gradients for the festival event.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#111827"/>
-      <stop offset="52%" stop-color="#3f1d37"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="0%" stop-color="#05070d"/>
+      <stop offset="52%" stop-color="#28151b"/>
+      <stop offset="100%" stop-color="#121826"/>
     </linearGradient>
     <linearGradient id="flare" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#fb7185"/>
-      <stop offset="100%" stop-color="#5eead4"/>
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ffd48a"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="800" fill="url(#bg)"/>
   <path d="M0 500C180 430 300 420 450 470C620 525 760 640 980 610C1090 595 1150 560 1200 540V800H0Z" fill="#020617" opacity="0.78"/>
-  <circle cx="920" cy="180" r="180" fill="#fb7185" opacity="0.14"/>
-  <circle cx="240" cy="180" r="150" fill="#5eead4" opacity="0.12"/>
+  <circle cx="920" cy="180" r="180" fill="#f97316" opacity="0.14"/>
+  <circle cx="240" cy="180" r="150" fill="#ffd48a" opacity="0.1"/>
   <g opacity="0.65" fill="none" stroke="url(#flare)" stroke-width="4">
     <path d="M160 370h880"/>
     <path d="M250 340h700"/>

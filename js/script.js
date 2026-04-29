@@ -32,6 +32,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 closeMenu();
             }
         });
+
+        document.addEventListener("click", (event) => {
+            if (!mobileQuery.matches || !navMenu.classList.contains("active")) {
+                return;
+            }
+
+            if (!navbar.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
     }
 
     const revealTargets = document.querySelectorAll(
@@ -58,6 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
         revealTargets.forEach((element) => element.classList.add("is-visible"));
     }
 
+    const homeHeroCopy = document.querySelector(".hero-copy");
+    if (homeHeroCopy) {
+        const updateHomeHeroCopy = () => {
+            if (window.scrollY > 48) {
+                homeHeroCopy.classList.add("is-visible");
+            } else {
+                homeHeroCopy.classList.remove("is-visible");
+            }
+        };
+
+        updateHomeHeroCopy();
+        window.addEventListener("scroll", updateHomeHeroCopy, { passive: true });
+    }
+
     const filterButtons = document.querySelectorAll("[data-filter]");
     const eventCards = document.querySelectorAll(".event-card[data-category]");
     const filterStatus = document.getElementById("filterStatus");
@@ -68,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (filterValue === "all") {
-            filterStatus.textContent = `Showing ${visibleCount} event${visibleCount === 1 ? "" : "s"}`;
+            filterStatus.textContent = `Showing ${visibleCount} performance${visibleCount === 1 ? "" : "s"}`;
             return;
         }
 
@@ -78,8 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
             festival: "festival"
         };
 
-        const noun = labels[filterValue] || "event";
-        filterStatus.textContent = `Showing ${visibleCount} ${noun} event${visibleCount === 1 ? "" : "s"}`;
+        const noun = labels[filterValue] || "performance";
+        filterStatus.textContent = `Showing ${visibleCount} ${noun}${visibleCount === 1 ? "" : "s"}`;
     };
 
     const setActiveFilter = (button) => {
@@ -167,11 +197,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const option = eventField.selectedOptions[0];
             const ticketCount = Math.max(Number(ticketsField.value) || 0, 0);
             const price = Number(option?.dataset.price || 0);
-            const venue = option?.dataset.venue || "Choose an event";
-            const eventName = option?.value || "No event selected";
+            const venue = option?.dataset.venue || "Choose a performance";
+            const eventName = option?.value || "No performance selected";
 
             if (selectedEvent) {
-                selectedEvent.textContent = option?.value ? eventName : "Select an event to see pricing.";
+                selectedEvent.textContent = option?.value ? eventName : "Select a performance to see pricing.";
             }
 
             if (selectedVenue) {
@@ -409,7 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const subjectText = contactSubject.options[contactSubject.selectedIndex].text;
             setBannerMessage(
                 contactStatus,
-                `Thanks, ${contactName.value.trim()}. We received your ${subjectText.toLowerCase()} message and will reply within one business day.`,
+                `Thanks, ${contactName.value.trim()}. We received your ${subjectText.toLowerCase()} inquiry and will reply within one business day.`,
                 "is-success"
             );
 
