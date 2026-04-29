@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Summer Rock Fest poster</title>
+  <desc id="desc">Bold concert poster with energetic red and teal gradients for the festival event.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="52%" stop-color="#3f1d37"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="flare" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <path d="M0 500C180 430 300 420 450 470C620 525 760 640 980 610C1090 595 1150 560 1200 540V800H0Z" fill="#020617" opacity="0.78"/>
+  <circle cx="920" cy="180" r="180" fill="#fb7185" opacity="0.14"/>
+  <circle cx="240" cy="180" r="150" fill="#5eead4" opacity="0.12"/>
+  <g opacity="0.65" fill="none" stroke="url(#flare)" stroke-width="4">
+    <path d="M160 370h880"/>
+    <path d="M250 340h700"/>
+    <path d="M320 310h560"/>
+  </g>
+  <text x="90" y="160" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Summer Rock Fest</text>
+  <text x="90" y="230" fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif" font-size="28">Riverside Park | June 1, 2026</text>
+</svg>

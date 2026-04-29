@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="EventHub is a polished event booking website for concerts, theater, and festivals with responsive browsing and easy ticket booking."
+    >
+    <title>EventHub | Book Your Next Experience</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <nav class="navbar" aria-label="Primary">
+        <div class="navbar-container container">
+            <div class="navbar-logo">
+                <a href="index.html">EventHub</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                &#9776;
+            </button>
+            <ul class="nav-menu" id="primary-navigation">
+                <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="booking.html" class="nav-link">Book Tickets</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero">
+            <video autoplay muted loop playsinline class="hero-video" poster="images/hero-poster.svg">
+                <source src="https://media.w3.org/cc0-video/flower.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-content container">
+                <span class="hero-eyebrow">Live events made simple</span>
+                <h1>Book your next experience with confidence.</h1>
+                <p>
+                    Discover concerts, shows, and festivals near you with a clean booking flow, responsive design,
+                    and a premium feel that stands out in a portfolio review.
+                </p>
+                <div class="hero-actions">
+                    <a href="events.html" class="cta-button">Explore Events</a>
+                    <a href="booking.html" class="secondary-button">Book Now</a>
+                </div>
+                <ul class="hero-stats" aria-label="Platform highlights">
+                    <li>
+                        <strong>24/7</strong>
+                        <span>Easy online booking</span>
+                    </li>
+                    <li>
+                        <strong>3</strong>
+                        <span>Event categories</span>
+                    </li>
+                    <li>
+                        <strong>Mobile</strong>
+                        <span>Responsive first design</span>
+                    </li>
+                    <li>
+                        <strong>Fast</strong>
+                        <span>Live form feedback</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="featured-events">
+            <div class="container">
+                <h2>Featured Events</h2>
+                <p class="section-subtitle">A quick look at the most interesting picks for this season.</p>
+
+                <div class="events-grid">
+                    <article class="event-card">
+                        <div class="event-image">
+                            <img src="images/jazz-night.svg" alt="Jazz Night Live poster" loading="lazy" decoding="async">
+                            <span class="event-badge">Concert</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Jazz Night Live</h3>
+                            <p class="event-date">May 15, 2026</p>
+                            <p class="event-location">Downtown Arena</p>
+                            <p class="event-price">From $25</p>
+                            <a href="event-details.html" class="view-details-btn">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <div class="event-image">
+                            <img src="images/theater-play.svg" alt="Shakespearian Play poster" loading="lazy" decoding="async">
+                            <span class="event-badge">Theater</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Shakespearian Play</h3>
+                            <p class="event-date">May 20, 2026</p>
+                            <p class="event-location">Central Theater</p>
+                            <p class="event-price">From $30</p>
+                            <a href="event-details.html" class="view-details-btn">View Details</a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <div class="event-image">
+                            <img src="images/rock-fest.svg" alt="Summer Rock Fest poster" loading="lazy" decoding="async">
+                            <span class="event-badge">Festival</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>Summer Rock Fest</h3>
+                            <p class="event-date">June 1, 2026</p>
+                            <p class="event-location">Riverside Park</p>
+                            <p class="event-price">From $45</p>
+                            <a href="event-details.html" class="view-details-btn">View Details</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section">
+            <div class="container">
+                <h2>Why EventHub Works</h2>
+                <p class="section-subtitle">The project now feels more like a real event platform instead of a demo page.</p>
+
+                <div class="experience-grid">
+                    <article class="feature-card">
+                        <h3>Clear user flow</h3>
+                        <p>Visitors can browse, filter, and book without hunting for the next step.</p>
+                        <ul class="feature-list">
+                            <li>Persistent navigation</li>
+                            <li>Strong page hierarchy</li>
+                            <li>Direct calls to action</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Professional form handling</h3>
+                        <p>Inputs now give helpful feedback instead of waiting for browser defaults.</p>
+                        <ul class="feature-list">
+                            <li>Inline validation</li>
+                            <li>Live booking totals</li>
+                            <li>Success and error messages</li>
+                        </ul>
+                    </article>
+
+                    <article class="feature-card">
+                        <h3>Modern responsive layout</h3>
+                        <p>The site scales cleanly from phones to desktops with a mobile-first structure.</p>
+                        <ul class="feature-list">
+                            <li>Flexible grids</li>
+                            <li>Readable typography</li>
+                            <li>Accessible controls</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EventHub</h4>
+                    <p>Your gateway to unforgettable experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="booking.html">Book Tickets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EventHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

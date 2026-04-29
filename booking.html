@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Book EventHub tickets with inline validation, live price updates, and clear booking confirmation feedback."
+    >
+    <title>Book Tickets | EventHub</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <nav class="navbar" aria-label="Primary">
+        <div class="navbar-container container">
+            <div class="navbar-logo">
+                <a href="index.html">EventHub</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                &#9776;
+            </button>
+            <ul class="nav-menu" id="primary-navigation">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="booking.html" class="nav-link active" aria-current="page">Book Tickets</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <span class="hero-eyebrow">Reserve your seats</span>
+                <h1>Book Your Tickets</h1>
+                <p class="section-subtitle">
+                    Choose an event, confirm your details, and see the total update instantly as you adjust the ticket count.
+                </p>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div class="container booking-layout">
+                <form id="bookingForm" class="booking-form" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name <span class="required-mark">*</span></label>
+                        <input type="text" id="name" name="name" autocomplete="name" required minlength="2" placeholder="Your full name">
+                        <p class="field-help">Use the name that should appear on the ticket.</p>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email <span class="required-mark">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+                        <p class="field-help">We will send your confirmation here.</p>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="event">Select Event <span class="required-mark">*</span></label>
+                        <select id="event" name="event" required>
+                            <option value="" selected disabled>Choose an event</option>
+                            <option value="Jazz Night Live" data-price="25" data-venue="Downtown Arena">Jazz Night Live - $25</option>
+                            <option value="Summer Rock Fest" data-price="45" data-venue="Riverside Park">Summer Rock Fest - $45</option>
+                            <option value="Shakespearian Play" data-price="30" data-venue="Central Theater">Shakespearian Play - $30</option>
+                            <option value="Skyline Acoustic Session" data-price="22" data-venue="Skyline Rooftop">Skyline Acoustic Session - $22</option>
+                        </select>
+                        <p class="field-help">Choose the event you want to attend.</p>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="tickets">Number of Tickets <span class="required-mark">*</span></label>
+                        <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required inputmode="numeric">
+                        <p class="field-help">Up to 10 tickets per booking.</p>
+                    </div>
+
+                    <p id="bookingMessage" class="form-message" aria-live="polite"></p>
+
+                    <button type="submit" class="form-submit">Confirm Booking</button>
+                </form>
+
+                <aside class="booking-summary">
+                    <h2>Booking Summary</h2>
+                    <p id="selectedEvent">Select an event to see pricing.</p>
+                    <dl class="summary-list">
+                        <div>
+                            <dt>Venue</dt>
+                            <dd id="selectedVenue">Venue will appear here</dd>
+                        </div>
+                        <div>
+                            <dt>Price per ticket</dt>
+                            <dd id="pricePerTicket">$0</dd>
+                        </div>
+                        <div>
+                            <dt>Total</dt>
+                            <dd id="totalPrice">$0</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EventHub</h4>
+                    <p>Your gateway to unforgettable experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="booking.html">Book Tickets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EventHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

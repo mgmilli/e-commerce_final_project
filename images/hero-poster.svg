@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">EventHub hero poster</title>
+  <desc id="desc">Abstract gradient poster used as the homepage video fallback.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08111f"/>
+      <stop offset="55%" stop-color="#12304a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="970" cy="150" r="180" fill="#38bdf8" opacity="0.15"/>
+  <circle cx="250" cy="680" r="220" fill="#5eead4" opacity="0.12"/>
+  <path d="M0 560C160 500 250 470 400 520C560 575 670 690 860 660C1000 638 1100 565 1200 520V800H0Z" fill="#050b16" opacity="0.7"/>
+  <g fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.7">
+    <path d="M120 180h220"/>
+    <path d="M120 210h150"/>
+    <path d="M850 245h120"/>
+    <path d="M850 275h180"/>
+  </g>
+  <text x="120" y="170" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">EventHub</text>
+  <text x="120" y="255" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="400">Book live experiences with a premium feel</text>
+</svg>
