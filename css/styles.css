@@ -156,6 +156,9 @@ button {
 }
 
 .navbar-logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.55rem;
     font-weight: 700;
@@ -166,13 +169,11 @@ button {
 
 .navbar-logo a::after {
     content: "";
-    display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
-    margin-left: 0.45rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, var(--accent), #ffd18b);
-    box-shadow: 0 0 18px rgba(245, 158, 11, 0.45);
+    display: block;
+    width: 0.95rem;
+    height: 0.95rem;
+    background: url("../images/fancy-mask.png") center/contain no-repeat;
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.35));
 }
 
 .nav-toggle {
@@ -234,19 +235,17 @@ button {
 .nav-link {
     display: block;
     padding: 0.7rem 1rem;
-    border-radius: 999px;
     color: var(--text);
     font-size: 0.98rem;
     font-weight: 700;
     text-align: center;
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
     position: relative;
 }
 
 .nav-link:hover,
 .nav-link.active {
     color: #ffd48a;
-    background: rgba(245, 158, 11, 0.12);
     transform: translateY(-1px);
 }
 
@@ -270,7 +269,7 @@ button {
 }
 
 .nav-link.active {
-    box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.14);
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.16);
 }
 
 .hero {
@@ -290,8 +289,8 @@ button {
     height: 100%;
     object-fit: cover;
     z-index: -2;
-    opacity: 0.42;
-    filter: saturate(0.85) contrast(1.08) brightness(0.75);
+    opacity: 0.88;
+    filter: saturate(0.9) contrast(1.06) brightness(0.88);
 }
 
 .hero::before {
@@ -309,7 +308,7 @@ button {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(180deg, transparent 0%, rgba(5, 7, 12, 0.62) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(5, 7, 12, 0.34) 100%);
 }
 
 .hero-content {
@@ -460,7 +459,10 @@ button {
 
 .hero-stats li {
     padding: 1rem 1rem 0.95rem;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero-stats strong {
@@ -480,7 +482,15 @@ button {
 }
 
 .page-hero-tight {
-    padding-bottom: 0;
+    padding-bottom: 0.4rem;
+}
+
+.page-hero-spaced {
+    padding-bottom: 1.8rem;
+}
+
+.detail-page-section {
+    padding-top: 1.1rem;
 }
 
 .page-hero h1,
@@ -502,7 +512,7 @@ button {
 }
 
 .page-hero-tight .section-subtitle {
-    margin-top: 0.7rem;
+    margin-top: 0.55rem;
 }
 
 .events-grid,
@@ -584,15 +594,23 @@ button {
 }
 
 .event-card.is-hidden {
-    max-height: 0;
-    margin: 0;
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 }
 
 .event-image {
     position: relative;
     overflow: hidden;
+}
+
+.event-card--festival .event-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(15, 7, 4, 0.12) 0%, rgba(77, 25, 5, 0.24) 55%, rgba(245, 103, 19, 0.28) 100%),
+        linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(249, 115, 22, 0.22) 100%);
+    mix-blend-mode: multiply;
+    pointer-events: none;
 }
 
 .event-image img {
@@ -602,9 +620,37 @@ button {
     transition: transform 0.45s ease, filter 0.45s ease;
 }
 
+.event-card--festival .event-image img {
+    filter: saturate(1.15) contrast(1.08) brightness(0.92) sepia(0.28) hue-rotate(-10deg);
+}
+
+.event-card--theater .event-image img {
+    filter: saturate(1.12) contrast(1.06) brightness(0.92) sepia(0.22) hue-rotate(-18deg);
+}
+
+.event-card--acoustic .event-image img {
+    filter: saturate(1.1) contrast(1.06) brightness(0.92) sepia(0.2) hue-rotate(-14deg);
+}
+
 .event-card:hover .event-image img {
     transform: scale(1.05);
     filter: saturate(1.08) contrast(1.02);
+}
+
+.event-card--festival:hover .event-image img {
+    filter: saturate(1.2) contrast(1.05) brightness(0.9) sepia(0.34) hue-rotate(-8deg);
+}
+
+.event-card--theater:hover .event-image img {
+    filter: saturate(1.16) contrast(1.08) brightness(0.9) sepia(0.28) hue-rotate(-14deg);
+}
+
+.event-card--acoustic:hover .event-image img {
+    filter: saturate(1.14) contrast(1.08) brightness(0.9) sepia(0.24) hue-rotate(-10deg);
+}
+
+.detail-media--acoustic img {
+    filter: saturate(1.08) contrast(1.04) brightness(0.94) sepia(0.18) hue-rotate(-12deg);
 }
 
 .event-badge {
@@ -677,6 +723,10 @@ button {
     width: 100%;
 }
 
+.feature-card {
+    text-align: center;
+}
+
 .feature-card h3,
 .contact-card h3,
 .booking-summary h2,
@@ -703,23 +753,30 @@ button {
     display: grid;
     gap: 0.75rem;
     margin-top: 1rem;
+    justify-items: center;
 }
 
 .feature-list li,
 .detail-list li {
     position: relative;
-    padding-left: 1.25rem;
+    padding-left: 0;
     color: #efe5d5;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
 }
 
 .feature-list li::before,
 .detail-list li::before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 0.62rem;
+    position: static;
     width: 0.48rem;
     height: 0.48rem;
+    flex: 0 0 auto;
     border-radius: 999px;
     background: linear-gradient(135deg, #f59e0b, #ffd38f);
     box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
@@ -727,6 +784,7 @@ button {
 
 .detail-layout {
     margin-top: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .detail-media {
@@ -734,11 +792,13 @@ button {
     border-radius: var(--radius-lg);
     border: 1px solid rgba(245, 158, 11, 0.16);
     box-shadow: var(--shadow-lg);
+    width: 100%;
+    min-height: 280px;
 }
 
 .detail-media img {
     width: 100%;
-    min-height: 280px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -975,6 +1035,8 @@ button {
     gap: 1.4rem;
     width: min(100%, 900px);
     margin: 0 auto;
+    justify-items: center;
+    text-align: center;
 }
 
 .footer-section h4 {
@@ -1110,6 +1172,18 @@ button {
         padding: 4rem 0;
     }
 
+    .page-hero-tight {
+        padding: 2.2rem 0 0.9rem;
+    }
+
+    .page-hero-spaced {
+        padding-bottom: 2.8rem;
+    }
+
+    .detail-page-section {
+        padding-top: 1.75rem;
+    }
+
     .section--tight,
     .page-section-tight {
         padding-top: 0;
@@ -1141,6 +1215,7 @@ button {
     .detail-layout {
         grid-template-columns: minmax(0, 1.28fr) minmax(320px, 0.72fr);
         align-items: start;
+        margin-bottom: 3rem;
     }
 
     .footer-content {
@@ -1153,6 +1228,7 @@ button {
 
     .footer-section {
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -1177,6 +1253,31 @@ button {
 }
 
 @media (max-width: 639.98px) {
+    .navbar-container {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "brand toggle"
+            "menu menu";
+        align-items: center;
+        column-gap: 0.85rem;
+    }
+
+    .navbar-logo {
+        grid-area: brand;
+        margin-right: 0;
+    }
+
+    .nav-toggle {
+        grid-area: toggle;
+        justify-self: end;
+        margin-left: 0;
+    }
+
+    .nav-menu {
+        grid-area: menu;
+    }
+
     .hero {
         min-height: 69vh;
         padding: 1.1rem 0 2.05rem;
@@ -1200,6 +1301,15 @@ button {
         padding: 1rem;
     }
 
+    .booking-form,
+    .contact-form,
+    .booking-summary,
+    .contact-card {
+        width: calc(100% - 1.1rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .footer-content {
         gap: 1.1rem;
     }
@@ -1207,6 +1317,10 @@ button {
     .section--tight,
     .page-section-tight {
         padding-top: 0;
+    }
+
+    .detail-page-section {
+        padding-top: 0.9rem;
     }
 }
 

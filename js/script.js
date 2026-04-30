@@ -74,6 +74,45 @@ document.addEventListener("DOMContentLoaded", () => {
         revealTargets.forEach((element) => element.classList.add("is-visible"));
     }
 
+    const detailLayouts = document.querySelectorAll(".detail-layout");
+    const syncDetailMediaHeights = () => {
+        const isDesktop = window.matchMedia("(min-width: 900px)").matches;
+
+        detailLayouts.forEach((layout) => {
+            const detailMedia = layout.querySelector(".detail-media");
+            const detailPanel = layout.querySelector(".detail-panel");
+
+            if (!detailMedia || !detailPanel) {
+                return;
+            }
+
+            if (isDesktop) {
+                detailMedia.style.height = `${detailPanel.offsetHeight}px`;
+            } else {
+                detailMedia.style.height = "";
+            }
+        });
+    };
+
+    if (detailLayouts.length) {
+        syncDetailMediaHeights();
+        window.addEventListener("load", syncDetailMediaHeights);
+        window.addEventListener("resize", syncDetailMediaHeights);
+
+        if ("ResizeObserver" in window) {
+            const detailObserver = new ResizeObserver(() => {
+                syncDetailMediaHeights();
+            });
+
+            detailLayouts.forEach((layout) => {
+                const detailPanel = layout.querySelector(".detail-panel");
+                if (detailPanel) {
+                    detailObserver.observe(detailPanel);
+                }
+            });
+        }
+    }
+
     const homeHeroCopy = document.querySelector(".hero-copy");
     if (homeHeroCopy) {
         const updateHomeHeroCopy = () => {
@@ -201,11 +240,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const eventName = option?.value || "No performance selected";
 
             if (selectedEvent) {
-                selectedEvent.textContent = option?.value ? eventName : "Select a performance to see pricing.";
+                selectedEvent.textContent = option?.value ? eventName : "Select a performance to review pricing.";
             }
 
             if (selectedVenue) {
-                selectedVenue.textContent = option?.value ? venue : "Venue will appear here";
+                selectedVenue.textContent = option?.value ? venue : "Venue details will appear here";
             }
 
             if (pricePerTicket) {
@@ -317,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
 
             if (!validateBookingForm()) {
-                setBannerMessage(bookingMessage, "Please fix the highlighted booking fields.", "is-error");
+                setBannerMessage(bookingMessage, "Please review the highlighted reservation fields.", "is-error");
                 return;
             }
 
@@ -325,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const count = Number(ticketsField.value);
             setBannerMessage(
                 bookingMessage,
-                `Booking confirmed for ${option.value} (${count} ticket${count === 1 ? "" : "s"}). A confirmation email will be sent shortly.`,
+                `Your reservation for ${option.value} (${count} ticket${count === 1 ? "" : "s"}) is confirmed. A confirmation email will be sent shortly.`,
                 "is-success"
             );
 
@@ -432,7 +471,7 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
 
             if (!validateContactForm()) {
-                setBannerMessage(contactStatus, "Please review the contact form fields.", "is-error");
+                setBannerMessage(contactStatus, "Please review the highlighted contact details.", "is-error");
                 return;
             }
 

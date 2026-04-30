@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Book EventHub tickets with inline validation, live price updates, and clear booking confirmation feedback."
+        content="Book Seatify tickets with inline validation, live price updates, and clear booking confirmation feedback."
     >
-    <title>Book Tickets | EventHub</title>
+    <title>Book Tickets | Seatify</title>
+    <link rel="icon" type="image/png" href="images/fancy-mask.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
     <nav class="navbar" aria-label="Primary">
         <div class="navbar-container container">
             <div class="navbar-logo">
-                <a href="index.html">EventHub</a>
+                <a href="index.html">Seatify</a>
             </div>
             <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
                 &#9776;
@@ -31,12 +32,12 @@
     </nav>
 
     <main id="main-content">
-        <section class="page-hero page-hero-tight section">
+        <section class="page-hero page-hero-tight page-hero-spaced section">
             <div class="container section-header section-header--compact">
                 <span class="hero-eyebrow">Reserve Your Seat</span>
                 <h1>Book Tickets</h1>
                 <p class="section-subtitle">
-                    Choose a performance, confirm your details, and watch the total update instantly as you adjust the ticket count.
+                    Choose a performance, review your reservation details, and secure your seats with confidence before checkout.
                 </p>
             </div>
         </section>
@@ -47,7 +48,7 @@
                     <div class="form-row">
                         <label for="name">Name <span class="required-mark">*</span></label>
                         <input type="text" id="name" name="name" autocomplete="name" required minlength="2" placeholder="Your full name">
-                        <p class="field-help">Use the name that should appear on the ticket.</p>
+                        <p class="field-help">Use the name that should appear on the reservation.</p>
                     </div>
 
                     <div class="form-row">
@@ -65,27 +66,27 @@
                             <option value="Shakespearian Play" data-price="30" data-venue="Central Theater">Shakespearian Play - $30</option>
                             <option value="Skyline Acoustic Session" data-price="22" data-venue="Skyline Rooftop">Skyline Acoustic Session - $22</option>
                         </select>
-                        <p class="field-help">Choose the event you want to attend.</p>
+                        <p class="field-help">Choose the performance you would like to attend.</p>
                     </div>
 
                     <div class="form-row">
                         <label for="tickets">Number of Tickets <span class="required-mark">*</span></label>
                         <input type="number" id="tickets" name="tickets" min="1" max="10" value="1" required inputmode="numeric">
-                        <p class="field-help">Up to 10 tickets per booking.</p>
+                        <p class="field-help">Up to 10 tickets per reservation.</p>
                     </div>
 
                     <p id="bookingMessage" class="form-message" aria-live="polite"></p>
 
-                    <button type="submit" class="form-submit btn btn-primary">Confirm Booking</button>
+                    <button type="submit" class="form-submit btn btn-primary">Complete Reservation</button>
                 </form>
 
                 <aside class="booking-summary card">
-                    <h2>Performance Summary</h2>
-                    <p id="selectedEvent">Select a performance to see pricing.</p>
+                    <h2>Reservation Summary</h2>
+                    <p id="selectedEvent">Select a performance to review pricing.</p>
                     <dl class="summary-list">
                         <div>
                             <dt>Venue</dt>
-                            <dd id="selectedVenue">Venue will appear here</dd>
+                            <dd id="selectedVenue">Venue details will appear here</dd>
                         </div>
                         <div>
                             <dt>Price per ticket</dt>
@@ -105,8 +106,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>EventHub</h4>
-                    <p>Your gateway to unforgettable experiences.</p>
+                    <h4>Seatify</h4>
+                    <p>Secure tickets, verified event details, and friendly box office support.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -127,7 +128,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 EventHub. All rights reserved.</p>
+                <p>&copy; 2026 Seatify. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -135,3 +136,4 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+

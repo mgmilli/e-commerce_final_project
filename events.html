@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
         name="description"
-        content="Browse EventHub's concerts, theater performances, and festivals with easy category filters."
+        content="Browse Seatify's concerts, theater performances, and festivals with easy category filters."
     >
-    <title>Events | EventHub</title>
+    <title>Events | Seatify</title>
+    <link rel="icon" type="image/png" href="images/fancy-mask.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
     <nav class="navbar" aria-label="Primary">
         <div class="navbar-container container">
             <div class="navbar-logo">
-                <a href="index.html">EventHub</a>
+                <a href="index.html">Seatify</a>
             </div>
             <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
                 &#9776;
@@ -33,15 +34,15 @@
     <main id="main-content">
         <section class="page-hero section">
             <div class="container section-header">
-                <span class="hero-eyebrow">Now Booking</span>
+                <span class="hero-eyebrow">Tonight's Lineup</span>
                 <h1>Upcoming Performances</h1>
                 <p class="section-subtitle">
-                    Browse the lineup, filter by category, and step into the next performance that catches your eye.
+                    Explore concerts, theater nights, festivals, and acoustic sets with clear pricing and verified event details.
                 </p>
             </div>
         </section>
 
-        <section class="page-section section">
+        <section class="page-section page-section-tight section">
             <div class="container">
                 <div class="event-filters" aria-label="Filter events">
                     <button type="button" class="filter-btn active" data-filter="all">All</button>
@@ -54,7 +55,7 @@
                 <div class="events-grid">
                     <article class="event-card card" data-category="concert">
                         <div class="event-image">
-                            <img src="images/jazz-night.svg" alt="Jazz Night Live poster" loading="lazy" decoding="async">
+                            <img src="images/jazz-night.jpg" alt="Jazz Night Live saxophone performance" loading="lazy" decoding="async">
                             <span class="event-badge">Concert</span>
                         </div>
                         <div class="event-info">
@@ -62,13 +63,13 @@
                             <p class="event-date">May 15, 2026</p>
                             <p class="event-location">Downtown Arena</p>
                             <p class="event-price">From $25</p>
-                            <a href="event-details.html" class="view-details-btn btn btn-secondary">View Details</a>
+                            <a href="jazz-night-details.html" class="view-details-btn btn btn-secondary">View Details</a>
                         </div>
                     </article>
 
-                    <article class="event-card card" data-category="festival">
+                    <article class="event-card event-card--festival card" data-category="festival">
                         <div class="event-image">
-                            <img src="images/rock-fest.svg" alt="Summer Rock Fest poster" loading="lazy" decoding="async">
+                            <img src="images/summer-fest.jpg" alt="Summer Rock Fest festival crowd" loading="lazy" decoding="async">
                             <span class="event-badge">Festival</span>
                         </div>
                         <div class="event-info">
@@ -76,13 +77,13 @@
                             <p class="event-date">June 1, 2026</p>
                             <p class="event-location">Riverside Park</p>
                             <p class="event-price">From $45</p>
-                            <a href="event-details.html" class="view-details-btn btn btn-secondary">View Details</a>
+                            <a href="summer-rock-fest-details.html" class="view-details-btn btn btn-secondary">View Details</a>
                         </div>
                     </article>
 
-                    <article class="event-card card" data-category="theater">
+                    <article class="event-card event-card--theater card" data-category="theater">
                         <div class="event-image">
-                            <img src="images/theater-play.svg" alt="Shakespearian Play poster" loading="lazy" decoding="async">
+                            <img src="images/shakespearian-play.jpg" alt="Shakespearian Play stage performance" loading="lazy" decoding="async">
                             <span class="event-badge">Theater</span>
                         </div>
                         <div class="event-info">
@@ -90,13 +91,13 @@
                             <p class="event-date">May 20, 2026</p>
                             <p class="event-location">Central Theater</p>
                             <p class="event-price">From $30</p>
-                            <a href="event-details.html" class="view-details-btn btn btn-secondary">View Details</a>
+                            <a href="shakespearian-play-details.html" class="view-details-btn btn btn-secondary">View Details</a>
                         </div>
                     </article>
 
-                    <article class="event-card card" data-category="concert">
+                    <article class="event-card event-card--acoustic card" data-category="concert">
                         <div class="event-image">
-                            <img src="images/acoustic-night.svg" alt="Skyline Acoustic Session poster" loading="lazy" decoding="async">
+                            <img src="images/skyline-acoustic-session.jpg" alt="Skyline Acoustic Session guitar closeup" loading="lazy" decoding="async">
                             <span class="event-badge">Concert</span>
                         </div>
                         <div class="event-info">
@@ -104,7 +105,7 @@
                             <p class="event-date">June 12, 2026</p>
                             <p class="event-location">Skyline Rooftop</p>
                             <p class="event-price">From $22</p>
-                            <a href="event-details.html" class="view-details-btn btn btn-secondary">View Details</a>
+                            <a href="skyline-acoustic-session-details.html" class="view-details-btn btn btn-secondary">View Details</a>
                         </div>
                     </article>
                 </div>
@@ -116,8 +117,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>EventHub</h4>
-                    <p>Your gateway to unforgettable experiences.</p>
+                    <h4>Seatify</h4>
+                    <p>Secure tickets, verified event details, and friendly box office support.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
@@ -138,7 +139,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 EventHub. All rights reserved.</p>
+                <p>&copy; 2026 Seatify. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -146,3 +147,4 @@
     <script src="js/script.js"></script>
 </body>
 </html>
+
